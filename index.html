@@ -145,6 +145,60 @@
         <div style="color: #94a3b8; font-size: 0.9rem;">Personal Research Notebook</div>
     </header>
     <div id="greeting-banner" class="sliding-greeting">
+  <div class="greeting-main">
+    <span id="dynamic-greeting">Hello</span>! Welcome to <span class="brand-highlight">Econo-Pulse</span>
+  </div>
+  <div class="greeting-sub">
+    Your one-stop solution for economic updates
+  </div>
+</div>
+
+<style>
+.sliding-greeting {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a); /* Sleek midnight blue palette */
+  color: #ffffff;
+  padding: 24px 30px;
+  border-radius: 16px;
+  margin: 25px auto;
+  max-width: 1200px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* The fluid sliding entrance animation */
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: slideInIntro 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.greeting-main {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 6px;
+}
+
+.brand-highlight {
+  color: #3b82f6; /* Modern electric blue highlight */
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.greeting-sub {
+  font-size: 1.05rem;
+  color: #94a3b8; /* Slate gray accent text */
+  font-weight: 400;
+}
+
+/* Keyframe for the slide-down pop effect */
+@keyframes slideInIntro {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+</style>
+    <div id="greeting-banner" class="sliding-greeting">
   <span id="dynamic-greeting">Welcome</span>!
 </div>
 
