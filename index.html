@@ -144,6 +144,36 @@
         <div class="logo">Macro<span>Insights</span></div>
         <div style="color: #94a3b8; font-size: 0.9rem;">Personal Research Notebook</div>
     </header>
+    <div id="greeting-banner" class="sliding-greeting">
+  <span id="dynamic-greeting">Welcome</span>!
+</div>
+
+<style>
+.sliding-greeting {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  color: white;
+  padding: 18px 25px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  
+  /* Smooth sliding intro animation */
+  transform: translateY(-30px);
+  opacity: 0;
+  animation: slideInDown 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+</style>
 
     <div class="container">
         
@@ -283,5 +313,26 @@ To conclude everything that has been discusses above, I would like to add that t
         // Refresh values sequentially every 5 minutes to maintain real-time performance without hitting limits
         setInterval(fetchLiveRates, 300000);
     </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const greetingText = document.getElementById("dynamic-greeting");
+  const hour = new Date().getHours();
+  let greeting = "Hello";
+
+  if (hour >= 4 && hour < 12) {
+    greeting = "Good Morning";
+  } else if (hour >= 12 && hour < 17) {
+    greeting = "Good Afternoon";
+  } else if (hour >= 17 && hour < 22) {
+    greeting = "Good Evening";
+  } else {
+    greeting = "Good Night";
+  }
+
+  if (greetingText) {
+    greetingText.textContent = greeting;
+  }
+});
+</script>
 </body>
 </html>
