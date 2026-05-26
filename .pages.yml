@@ -1,9 +1,0 @@
-content:
-  - name: pages
-    label: Pages
-    type: file
-    path: index.html
-    fields:
-      - name: body
-        label: Edit Website HTML
-        type: code
