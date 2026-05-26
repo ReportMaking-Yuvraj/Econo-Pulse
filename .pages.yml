@@ -1,8 +1,5 @@
-media:
-  input: ""
-  output: ""
 collections:
-  - name: Pages
+  - name: pages
     label: Pages
     type: files
     files:
