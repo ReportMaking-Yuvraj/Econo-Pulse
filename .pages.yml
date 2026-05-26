@@ -1,15 +1,12 @@
-media:
-  input: ""
-  output: ""
 collections:
-  - name: reports
-    label: My Economic Reports
-    type: files
+  - name: "reports"
+    label: "My Economic Reports"
+    type: "files"
     files:
-      - name: dashboard
-        label: Live Website Editor
-        path: index.html
+      - name: "dashboard"
+        label: "Live Website Editor"
+        path: "index.html"
         fields:
-          - name: body
-            label: Write Your Report Content Here
-            type: code
+          - name: "body"
+            label: "Write Your Report Content Here"
+            type: "code"
